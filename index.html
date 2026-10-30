@@ -8,261 +8,15 @@
 
   <title>Kai Mathis | Online Resume</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background-color: #f8f8f6;
-      color: #414141;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    /* NAVIGATION */
-
-    header {
-      width: 100%;
-      padding: 25px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      border-bottom: 1px solid #e4e4e4;
-    }
-
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 25px;
-      letter-spacing: -1px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: 14px;
-      color: #555;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* MAIN CONTAINER */
-
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 0 30px;
-    }
-
-    /* HERO SECTION */
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
-      gap: 70px;
-      align-items: center;
-      padding: 70px 0 90px;
-    }
-
-    .hero-image {
-      width: 100%;
-      min-width: 0;
-    }
-
-    .headshot {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      position: static;
-      margin: 0;
-    }
-
-    .hero-content {
-      position: static;
-      min-width: 0;
-      width: 100%;
-    }
-
-    .eyebrow {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #777;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(42px, 5vw, 68px);
-      font-weight: normal;
-      line-height: 1.1;
-      margin: 0 0 22px;
-    }
-
-    .subtitle {
-      font-size: 17px;
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-    .contact {
-      font-size: 15px;
-      margin-bottom: 25px;
-      overflow-wrap: anywhere;
-    }
-
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      font-size: 14px;
-    }
-
-    .hero-links a {
-      text-decoration: underline;
-      text-underline-offset: 5px;
-    }
-
-    /* RESUME SECTIONS */
-
-    section.resume-section {
-      padding: 65px 0;
-      border-top: 1px solid #ddd;
-    }
-
-    h2 {
-      font-family: Georgia, serif;
-      font-size: 38px;
-      font-weight: normal;
-      margin: 0 0 40px;
-    }
-
-    .resume-item {
-      display: grid;
-      grid-template-columns: 240px minmax(0, 1fr);
-      gap: 40px;
-      margin-bottom: 50px;
-    }
-
-    .resume-date {
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #888;
-    }
-
-    .resume-location {
-      font-size: 13px;
-      color: #777;
-      margin-top: 10px;
-    }
-
-    .resume-details h3 {
-      font-size: 23px;
-      font-weight: 400;
-      margin: 0 0 5px;
-    }
-
-    .organization {
-      font-size: 15px;
-      color: #777;
-      margin: 0 0 18px;
-    }
-
-    .resume-details ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-
-    .resume-details li {
-      margin-bottom: 10px;
-      font-size: 15px;
-      color: #555;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 40px 6%;
-      border-top: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      font-size: 13px;
-      color: #777;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        gap: 15px;
-      }
-
-      main {
-        padding: 0 20px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 35px 0 60px;
-      }
-
-      .hero-image {
-        max-width: 450px;
-      }
-
-      h1 {
-        font-size: 46px;
-      }
-
-      .resume-item {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-
-      h2 {
-        font-size: 32px;
-      }
-
-      footer {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
   <!-- NAVIGATION -->
 
-  <header>
-    <div class="logo">KM.</div>
+  <header class="site-header">
+    <a href="#home" class="logo">KM.</a>
 
     <nav aria-label="Main navigation">
       <a href="#home">Kai Mathis</a>
@@ -283,7 +37,7 @@
         <img
           class="headshot"
           src="https://instasize.com/api/image/ec4783a84effa6af4a8a8bf9588a87f41f72c7bdf4bae58f1e2119e4049b87f5.jpeg"
-          alt="Professional headshot of Kai Mathis"
+          alt="Kai Mathis professional headshot"
         >
       </div>
 
@@ -311,7 +65,11 @@
             Explore my experience ↓
           </a>
 
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn profile ↗
           </a>
         </div>
@@ -327,13 +85,9 @@
 
       <div class="resume-item">
 
-        <div>
-          <div class="resume-date">
-            Sep 2024 — Apr 2026
-          </div>
-          <div class="resume-location">
-            College Park, Maryland
-          </div>
+        <div class="resume-meta">
+          <p class="resume-date">Sep 2024 — Apr 2026</p>
+          <p class="resume-location">College Park, Maryland</p>
         </div>
 
         <div class="resume-details">
@@ -364,13 +118,9 @@
 
       <div class="resume-item">
 
-        <div>
-          <div class="resume-date">
-            May 2024 — Jun 2024
-          </div>
-          <div class="resume-location">
-            Washington, D.C.
-          </div>
+        <div class="resume-meta">
+          <p class="resume-date">May 2024 — Jun 2024</p>
+          <p class="resume-location">Washington, D.C.</p>
         </div>
 
         <div class="resume-details">
@@ -411,13 +161,9 @@
 
       <div class="resume-item">
 
-        <div>
-          <div class="resume-date">
-            Aug 2024 — Dec 2027
-          </div>
-          <div class="resume-location">
-            College Park, Maryland
-          </div>
+        <div class="resume-meta">
+          <p class="resume-date">Aug 2024 — Dec 2027</p>
+          <p class="resume-location">College Park, Maryland</p>
         </div>
 
         <div class="resume-details">
@@ -437,20 +183,14 @@
 
       <div class="resume-item">
 
-        <div>
-          <div class="resume-date">
-            Aug 2023 — May 2024
-          </div>
-          <div class="resume-location">
-            Washington, D.C.
-          </div>
+        <div class="resume-meta">
+          <p class="resume-date">Aug 2023 — May 2024</p>
+          <p class="resume-location">Washington, D.C.</p>
         </div>
 
         <div class="resume-details">
           <h3>Howard University</h3>
-          <p class="organization">
-            School of Business
-          </p>
+          <p class="organization">School of Business</p>
 
           <p>
             Studied Business Administration,
@@ -469,8 +209,8 @@
       <h2>Organizations.</h2>
 
       <div class="resume-item">
-        <div class="resume-date">
-          Aug 2025 — May 2026
+        <div class="resume-meta">
+          <p class="resume-date">Aug 2025 — May 2026</p>
         </div>
 
         <div class="resume-details">
@@ -482,8 +222,8 @@
       </div>
 
       <div class="resume-item">
-        <div class="resume-date">
-          Feb 2025 — Present
+        <div class="resume-meta">
+          <p class="resume-date">Feb 2025 — Present</p>
         </div>
 
         <div class="resume-details">
@@ -495,8 +235,8 @@
       </div>
 
       <div class="resume-item">
-        <div class="resume-date">
-          Mar 2025 — Present
+        <div class="resume-meta">
+          <p class="resume-date">Mar 2025 — Present</p>
         </div>
 
         <div class="resume-details">
@@ -508,15 +248,13 @@
       </div>
 
       <div class="resume-item">
-        <div class="resume-date">
-          Aug 2025 — Present
+        <div class="resume-meta">
+          <p class="resume-date">Aug 2025 — Present</p>
         </div>
 
         <div class="resume-details">
           <h3>National Black Law Students Association</h3>
-          <p class="organization">
-            Pre-Law Student
-          </p>
+          <p class="organization">Pre-Law Student</p>
         </div>
       </div>
 
@@ -545,11 +283,10 @@
 
   <!-- FOOTER -->
 
-  <footer>
+  <footer class="site-footer">
     <span>© 2026 Kai Mathis</span>
     <span>Sports Journalism · Business · Pre-Law</span>
   </footer>
 
 </body>
 </html>
-
