@@ -45,3 +45,53 @@
 }
 
 }
+
+/* Fix headshot and introduction layout */
+.hero {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 60px auto 80px;
+  padding: 0 30px;
+}
+
+.hero img,
+.headshot {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  position: static;
+}
+
+.hero-content {
+  position: static;
+  width: 100%;
+  min-width: 0;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  margin: 15px 0;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 30px auto;
+  }
+
+  .hero img,
+  .headshot {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+}
